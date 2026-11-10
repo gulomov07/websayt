@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEBULA — Explore The Universe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+
+<nav>
+    <a href="#" class="logo">NEBULA.</a>
+
+    <div class="links" id="navLinks">
+        <a href="#home">Bosh sahifa</a>
+        <a href="#planets">Sayyoralar</a>
+        <a href="#explore">Kashfiyot</a>
+        <a href="#quiz">Quiz</a>
+    </div>
+
+    <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn">☀</button>
+        <button class="icon-btn menu-btn" id="menuBtn">☰</button>
+    </div>
+</nav>
+
+<header class="hero" id="home">
+    <div>
+        <span class="tag">✦ KOINOTGA XUSH KELIBSIZ</span>
+        <h1>CHEKSIZ<br><span>KOINOT</span><br>OLAMI.</h1>
+        <p>
+            Yer chegaralaridan tashqariga chiqing.
+            Sirli sayyoralar, milliardlab yulduzlar
+            va hali kashf qilinmagan olamlarni biz
+            bilan o‘rganing.
+        </p>
+
+        <div class="buttons">
+            <a href="#planets" class="primary">Sayyoralarni ko‘rish ↗</a>
+            <a href="#quiz" class="secondary">Bilimingizni sinang</a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="orbit">
+            <div class="planet-main"></div>
+            <div class="moon"></div>
+        </div>
+    </div>
+</header>
+
+<div class="stats">
+    <div class="stat">
+        <strong>8</strong>
+        <p>Quyosh tizimi sayyoralari</p>
+    </div>
+    <div class="stat">
+        <strong>∞</strong>
+        <p>Kashf qilinmagan sirlar</p>
+    </div>
+    <div class="stat">
+        <strong>1</strong>
+        <p>Bizning uyimiz — Yer</p>
+    </div>
+</div>
+
+<section id="planets">
+    <div class="section-head">
+        <div>
+            <span class="eyebrow">KOSMIK KATALOG</span>
+            <h2>Sayyoralar olami</h2>
+            <p class="description">
+                O‘zingizga yoqqan sayyorani tanlang
+                va u haqida ma'lumot oling.
+            </p>
+        </div>
+
+        <input class="search" id="search"
+        placeholder="🔍 Sayyorani qidiring...">
+    </div>
+
+    <div class="filters">
+        <button class="filter active" data-filter="all">Barchasi</button>
+        <button class="filter" data-filter="rock">Toshli</button>
+        <button class="filter" data-filter="gas">Gazli</button>
+        <button class="filter" data-filter="ice">Muzli</button>
+        <button class="filter" data-filter="fav">❤️ Sevimlilar</button>
+    </div>
+
+    <div class="grid" id="planetGrid"></div>
+</section>
+
+<section id="explore">
+    <div class="explore">
+        <div>
+            <span class="eyebrow">YANGI SARHADLAR</span>
+            <h2>Koinotning har bir burchagida yangi bir sir bor.</h2>
+            <p class="description">
+                Bilimlaringizni kengaytiring, sayyoralarni
+                o‘rganing va kosmik sayohatingizni boshlang.
+            </p>
+
+            <div class="buttons">
+                <a href="#quiz" class="primary">Sinovni boshlash →</a>
+            </div>
+        </div>
+
+        <div class="explore-art">🚀</div>
+    </div>
+</section>
+
+<section id="quiz">
+    <div class="quiz-heading">
+        <span class="eyebrow">INTERAKTIV SINOV</span>
+        <h2>Koinotni bilasizmi?</h2>
+        <p class="description">
+            Savollarga javob bering va bilimingizni tekshiring.
+        </p>
+    </div>
+
+    <div class="quiz">
+        <h3 id="question"></h3>
+        <div class="quiz-options" id="options"></div>
+        <div class="quiz-result" id="result"></div>
+        <button class="primary" id="nextBtn" style="display:none">
+            Keyingi savol →
+        </button>
+    </div>
+</section>
+
+<footer>
+    <strong>NEBULA.</strong>
+    <span>© 2026 NEBULA Universe Explorer</span>
+    <span>Made for curious minds ✦</span>
+</footer>
+
+<div class="modal" id="modal">
+    <div class="modal-box">
+        <button class="modal-close" id="closeModal">×</button>
+        <div class="modal-planet" id="modalEmoji"></div>
+        <h2 id="modalName"></h2>
+        <p class="description" id="modalInfo"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
